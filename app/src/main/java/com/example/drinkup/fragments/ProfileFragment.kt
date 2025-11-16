@@ -11,11 +11,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import com.example.drinkup.DrinkViewModel
 import com.example.drinkup.R
 import com.example.drinkup.auth.LoginActivity
 import com.example.drinkup.databinding.FragmentProfileBinding
 import com.example.drinkup.utils.PreferencesManager
+import com.example.drinkup.viewmodel.DrinkViewModel
 import com.example.drinkup.workers.ReminderWorker
 import java.util.*
 
@@ -86,8 +86,8 @@ class ProfileFragment : Fragment() {
             .setPositiveButton(getString(R.string.save)) { _, _ ->
                 val newName = etName.text.toString().trim()
                 if (newName.isNotEmpty()) {
-                    user.nom = newName
-                    viewModel.currentUser.value = user
+                    // ✅ إنشاء نسخة جديدة لتحديث الاسم
+                    viewModel.updateUserName(newName)
                     Toast.makeText(
                         requireContext(),
                         getString(R.string.profile_updated),

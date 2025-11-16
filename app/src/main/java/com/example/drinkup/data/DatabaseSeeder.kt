@@ -1,6 +1,7 @@
 package com.example.drinkup.data
 
 import com.example.drinkup.database.AppDatabase
+import com.example.drinkup.database.DrinkDao
 import com.example.drinkup.database.entities.DrinkEntry
 import com.example.drinkup.database.entities.GoalHistory
 import com.example.drinkup.database.entities.UserProfile
@@ -29,7 +30,8 @@ object DatabaseSeeder {
                 birthDate = "01/01/1990"
             )
 
-            val userId = dao.insertUser(demoUser)
+            // Use registerUser (اسم صحيح من DrinkDao)
+            val userId = dao.registerUser(demoUser)
 
             // Seed drink entries for the last 7 days
             seedDrinkEntries(dao, userId)
@@ -39,7 +41,7 @@ object DatabaseSeeder {
         }
     }
 
-    private suspend fun seedDrinkEntries(dao: com.example.drinkup.dao.DrinkDao, userId: Long) {
+    private suspend fun seedDrinkEntries(dao: DrinkDao, userId: Long) {
         val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
         val calendar = Calendar.getInstance()
 
@@ -62,28 +64,22 @@ object DatabaseSeeder {
         }
     }
 
-    private suspend fun seedGoalHistory(dao: com.example.drinkup.dao.DrinkDao, userId: Long) {
+    private suspend fun seedGoalHistory(dao: DrinkDao, userId: Long) {
         val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
         val calendar = Calendar.getInstance()
 
         for (dayOffset in 1..14) {
             calendar.time = Date()
             calendar.add(Calendar.DAY_OF_YEAR, -dayOffset)
-            val date = dateFormat.format(calendar.time)
-
-            val consumed = (1500..3000).random()
-            val goal = 2500
+            val startDate = dateFormat.format(calendar.time)
 
             val goalHistory = GoalHistory(
                 userId = userId,
-                goalMl = 2500,
-                startDate = "13/11/2025", // تاريخ البداية
-                endDate = null,           // null يعني الهدف جاري
+                objectif = 2500,
+                startDate = startDate,
+                endDate = null,
                 isActive = true
             )
-            dao.insertGoalHistory(goalHistory)
-
-
 
             dao.insertGoalHistory(goalHistory)
         }

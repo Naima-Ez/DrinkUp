@@ -10,7 +10,7 @@ interface UserDao {
     suspend fun insert(user: UserProfile): Long
 
     @Query("SELECT * FROM user_profile WHERE email = :email AND password = :password LIMIT 1")
-    suspend fun login(email: String, password: String): UserProfile?
+    suspend fun loginUser(email: String, password: String): UserProfile?
 
     @Query("SELECT * FROM user_profile WHERE id = :userId")
     fun getUserById(userId: Long): Flow<UserProfile?>

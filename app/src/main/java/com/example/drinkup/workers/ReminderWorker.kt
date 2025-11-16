@@ -15,7 +15,7 @@ class ReminderWorker(
     override fun doWork(): Result {
         // Vérifier si les notifications sont activées
         val prefs = PreferencesManager(applicationContext)
-        if (prefs.userId != -1L) {
+        if (prefs.currentUserId  != -1L) {
             val notificationHelper = NotificationHelper(applicationContext)
             notificationHelper.sendReminderNotification()
         }

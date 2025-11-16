@@ -8,8 +8,8 @@ data class GoalHistory(
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
     val userId: Long,
-    val goalMl: Int,
-    val startDate: String, // yyyy-MM-dd
-    val endDate: String?, // null if current goal
-    val isActive: Boolean = true
+    val objectif: Int,
+    val isActive: Boolean = true,
+    val startDate: String,     // تاريخ بدء الهدف
+    val endDate: String? = null // تاريخ نهاية الهدف
 )

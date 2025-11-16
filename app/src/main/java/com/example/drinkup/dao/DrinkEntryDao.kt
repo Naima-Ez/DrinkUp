@@ -5,6 +5,9 @@ import androidx.room.*
 import com.example.drinkup.database.DailySummary
 import com.example.drinkup.database.entities.*
 
+import java.util.Date
+
+
 @Dao
 interface DrinkDao {
 
@@ -72,12 +75,19 @@ interface DrinkDao {
     @Insert
     suspend fun insertGoalHistory(goalHistory: GoalHistory): Long
 
-    @Query("SELECT * FROM goal_history WHERE userId = :userId ORDER BY date DESC LIMIT 30")
+//
+    @Query("SELECT * FROM goal_history WHERE userId = :userId ORDER BY startDate DESC LIMIT 30")
     suspend fun getGoalHistory(userId: Long): List<GoalHistory>
 
-    @Query("SELECT * FROM goal_history WHERE userId = :userId ORDER BY date DESC LIMIT 30")
-    fun getGoalHistoryLive(userId: Long): LiveData<List<GoalHistory>>
+    @Query("SELECT * FROM goal_history WHERE userId = :userId ORDER BY startDate DESC LIMIT 30")
+   fun getGoalHistoryLive(userId: Long): LiveData<List<GoalHistory>>
 
-    @Query("SELECT * FROM goal_history WHERE userId = :userId AND date = :date LIMIT 1")
-    suspend fun getGoalByDate(userId: Long, date: String): GoalHistory?
+    @Query("SELECT * FROM goal_history WHERE userId = :userId AND startDate = :date LIMIT 1")
+   suspend fun getGoalByDate(userId: Long, date: String): GoalHistory?
+
+
+    // ===================== DRINK ENTRY =====================
+
+
+
 }

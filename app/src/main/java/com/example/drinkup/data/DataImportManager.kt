@@ -56,7 +56,7 @@ class DataImportManager(private val context: Context) {
                     goalHistory.add(
                         GoalHistory(
                             userId = userId,
-                            goalMl = goalJson.getInt("goalMl"),
+                            objectif = goalJson.getInt("goalMl"),
                             startDate = goalJson.getString("startDate"),
                             endDate = goalJson.optString("endDate", null),
                             isActive = goalJson.optBoolean("isActive", true)

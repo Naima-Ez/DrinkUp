@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.*
 import com.example.drinkup.database.AppDatabase
 import com.example.drinkup.database.DailySummary
+import com.example.drinkup.database.DrinkDao   // ✅ مهم: استعمل هذا المسار فقط
 import com.example.drinkup.database.entities.DrinkEntry
 import com.example.drinkup.database.entities.UserProfile
 import com.example.drinkup.repository.DrinkRepository
@@ -13,7 +14,8 @@ import java.util.*
 
 class DrinkViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val dao = AppDatabase.getDatabase(application).drinkDao()
+    // DAO صحيح من database
+    private val dao: DrinkDao = AppDatabase.getDatabase(application).drinkDao()
     private val repository = DrinkRepository(dao)
 
     // -------------------------
@@ -70,9 +72,9 @@ class DrinkViewModel(application: Application) : AndroidViewModel(application) {
     // -------------------------
     fun registerUser(user: UserProfile, onSuccess: (Int) -> Unit) {
         viewModelScope.launch {
-            val userId = repository.insertUser(user).toInt()
-            user.id = userId.toLong()
-            _currentUser.postValue(user)
+            val userId = repository.registerUser(user).toInt()
+            val userWithId = user.copy(id = userId.toLong())
+            _currentUser.postValue(userWithId)
             updateTodayTotal()
             onSuccess(userId)
         }
@@ -126,8 +128,8 @@ class DrinkViewModel(application: Application) : AndroidViewModel(application) {
         val user = _currentUser.value ?: return
         viewModelScope.launch {
             repository.updateGoal(user.id, newGoalMl)
-            user.objectifMl = newGoalMl
-            _currentUser.postValue(user)
+            val updatedUser = user.copy(objectifMl = newGoalMl)
+            _currentUser.postValue(updatedUser)
             updateTodayTotal()
         }
     }
@@ -139,8 +141,8 @@ class DrinkViewModel(application: Application) : AndroidViewModel(application) {
         val user = _currentUser.value ?: return
         viewModelScope.launch {
             repository.updateNotifications(user.id, enabled)
-            user.notificationsEnabled = enabled
-            _currentUser.postValue(user)
+            val updatedUser = user.copy(notificationsEnabled = enabled)
+            _currentUser.postValue(updatedUser)
         }
     }
 
@@ -151,8 +153,8 @@ class DrinkViewModel(application: Application) : AndroidViewModel(application) {
         val user = _currentUser.value ?: return
         viewModelScope.launch {
             repository.updateLanguage(user.id, lang)
-            user.langue = lang
-            _currentUser.postValue(user)
+            val updatedUser = user.copy(langue = lang)
+            _currentUser.postValue(updatedUser)
         }
     }
 
@@ -169,5 +171,12 @@ class DrinkViewModel(application: Application) : AndroidViewModel(application) {
     suspend fun getWeeklySummary(): List<DailySummary> {
         val user = _currentUser.value ?: return emptyList()
         return repository.getWeeklySummary(user.id)
+    }
+
+    fun updateUserName(newName: String) {
+        _currentUser.value?.let { user ->
+            val updatedUser = user.copy(nom = newName)
+            _currentUser.postValue(updatedUser)
+        }
     }
 }

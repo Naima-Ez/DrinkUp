@@ -6,6 +6,7 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface GoalHistoryDao {
+
     @Insert
     suspend fun insert(goal: GoalHistory): Long
 
@@ -20,4 +21,10 @@ interface GoalHistoryDao {
 
     @Update
     suspend fun update(goal: GoalHistory)
+
+    @Query("SELECT * FROM goal_history WHERE userId = :userId ORDER BY startDate DESC LIMIT 30")
+    suspend fun getGoalHistory(userId: Long): List<GoalHistory>
+
+    @Query("SELECT * FROM goal_history WHERE userId = :userId AND startDate = :startDate LIMIT 1")
+    suspend fun getGoalByStartDate(userId: Long, startDate: String): GoalHistory?
 }

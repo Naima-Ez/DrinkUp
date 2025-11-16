@@ -19,7 +19,7 @@ class DataExportManager(private val context: Context) {
 
     private val dateFormat = SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.getDefault())
 
-    // Export to CSV
+    // -------------------------- Export to CSV --------------------------
     suspend fun exportToCSV(
         user: UserProfile,
         drinkEntries: List<DrinkEntry>,
@@ -41,18 +41,19 @@ class DataExportManager(private val context: Context) {
                 // Goal history
                 goalHistory.forEach { goal ->
                     writer.append(
-                        "Objectif,${goal.startDate},,${goal.goalMl},${if (goal.isActive) "Oui" else "Non"}\n"
+                        "Objectif,${goal.startDate},,${goal.objectif},${if (goal.isActive) "Oui" else "Non"}\n"
                     )
                 }
             }
 
             Uri.fromFile(file)
         } catch (e: Exception) {
+            e.printStackTrace()
             null
         }
     }
 
-    // Export to JSON
+    // -------------------------- Export to JSON --------------------------
     suspend fun exportToJSON(
         user: UserProfile,
         drinkEntries: List<DrinkEntry>,
@@ -71,6 +72,9 @@ class DataExportManager(private val context: Context) {
                     put("username", user.username)
                     put("email", user.email)
                     put("birthDate", user.birthDate)
+                    put("objectifMl", user.objectifMl)
+                    put("notificationsEnabled", user.notificationsEnabled)
+                    put("langue", user.langue)
                 })
 
                 // Drink entries
@@ -88,7 +92,7 @@ class DataExportManager(private val context: Context) {
                 put("goalHistory", JSONArray().apply {
                     goalHistory.forEach { goal ->
                         put(JSONObject().apply {
-                            put("goalMl", goal.goalMl)
+                            put("objectifMl", goal.objectif)
                             put("startDate", goal.startDate)
                             put("endDate", goal.endDate)
                             put("isActive", goal.isActive)
@@ -103,11 +107,12 @@ class DataExportManager(private val context: Context) {
 
             Uri.fromFile(file)
         } catch (e: Exception) {
+            e.printStackTrace()
             null
         }
     }
 
-    // Share exported file
+    // -------------------------- Share exported file --------------------------
     fun shareFile(uri: Uri, mimeType: String = "text/csv") {
         val intent = Intent(Intent.ACTION_SEND).apply {
             type = mimeType

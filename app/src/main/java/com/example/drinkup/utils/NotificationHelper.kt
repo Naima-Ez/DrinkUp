@@ -34,6 +34,19 @@ class NotificationHelper(private val context: Context) {
     }
 
     fun sendReminderNotification() {
+
+        // 1️⃣ تحقق من الإذن قبل إرسال Notification
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            val hasPermission = context.checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS) ==
+                    android.content.pm.PackageManager.PERMISSION_GRANTED
+
+            if (!hasPermission) {
+                // ماعندوش الإذن → ما ترسل والو
+                return
+            }
+        }
+
+        // 2️⃣ إنشاء الـ Notification
         val builder = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_water_drop)
             .setContentTitle(context.getString(R.string.notification_title))
@@ -41,8 +54,10 @@ class NotificationHelper(private val context: Context) {
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setAutoCancel(true)
 
+        // 3️⃣ إرسال Notification
         with(NotificationManagerCompat.from(context)) {
             notify(NOTIFICATION_ID, builder.build())
         }
     }
+
 }

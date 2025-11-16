@@ -1,4 +1,3 @@
-
 package com.example.drinkup.views
 
 import android.content.Context
@@ -31,7 +30,7 @@ class WaterProgressView @JvmOverloads constructor(
         color = Color.WHITE
         textSize = 48f
         textAlign = Paint.Align.CENTER
-        Paint.setTypeface = Typeface.create(Typeface.DEFAULT, Typeface.BOLD)
+        typeface = Typeface.create(Typeface.DEFAULT, Typeface.BOLD) // ✅ هنا التعديل
     }
 
     private val path = Path()

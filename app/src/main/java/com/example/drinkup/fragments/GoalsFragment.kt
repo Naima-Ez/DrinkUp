@@ -35,7 +35,7 @@ class GoalHistoryAdapter : ListAdapter<GoalHistory, GoalHistoryAdapter.GoalViewH
 
         fun bind(goal: GoalHistory) {
             tvDate.text = goal.startDate // أو goal.endDate إذا بغيت
-            tvGoal.text = "${goal.goalMl} ml"
+            tvGoal.text = "${goal.objectif} ml"
             // إذا بغيت تحسب consomme (مثلاً من DrinkEntry) خصك تربطهم فالViewModel
 
             // الحالة

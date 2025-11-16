@@ -25,6 +25,8 @@ import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.coroutines.launch
 
+
+
 class DashboardFragment : Fragment() {
 
     private var _binding: FragmentDashboardBinding? = null
@@ -150,10 +152,11 @@ class DashboardFragment : Fragment() {
 
         buttons.forEach { (id, quantity) ->
             sheetView.findViewById<View>(id)?.setOnClickListener {
-                addDrink(quantity)
+                viewModel.addDrink(quantity)
                 bottomSheet.dismiss()
             }
         }
+
 
         sheetView.findViewById<View>(R.id.btn_custom)?.setOnClickListener {
             bottomSheet.dismiss()
@@ -163,7 +166,6 @@ class DashboardFragment : Fragment() {
         bottomSheet.setContentView(sheetView)
         bottomSheet.show()
     }
-
     private fun showCustomAmountDialog() {
         val input = EditText(requireContext())
         input.inputType = android.text.InputType.TYPE_CLASS_NUMBER
@@ -177,4 +179,16 @@ class DashboardFragment : Fragment() {
             .setView(input)
             .setPositiveButton(getString(R.string.add)) { _, _ ->
                 val amount = input.text.toString().toIntOrNull()
+
                 if (amount != null && amount in 1..5000) {
+                    viewModel.addDrink(amount)
+                    Toast.makeText(requireContext(), "Added $amount ml", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(requireContext(), "Invalid amount", Toast.LENGTH_SHORT).show()
+                }
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
+    }
+
+}

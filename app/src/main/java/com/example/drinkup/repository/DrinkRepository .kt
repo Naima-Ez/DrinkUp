@@ -1,24 +1,21 @@
 package com.example.drinkup.repository
 
 import androidx.lifecycle.LiveData
-import androidx.room.Query
 import com.example.drinkup.database.DrinkDao
 import com.example.drinkup.database.DailySummary
-
 import com.example.drinkup.database.entities.*
 
-
-
-class DrinkRepository(private val dao: DrinkDao) {
+class DrinkRepository(private val dao: com.example.drinkup.database.DrinkDao)
+ {
 
     // ---------------------- USER ----------------------
-
-
+    suspend fun loginUser(email: String, password: String): UserProfile? {
+        return dao.getUserByEmailAndPassword(email, password)
+    }
 
     suspend fun registerUser(user: UserProfile): Long {
         return dao.registerUser(user)
     }
-
 
     suspend fun updateUser(user: UserProfile) {
         dao.updateUser(user)
@@ -36,28 +33,31 @@ class DrinkRepository(private val dao: DrinkDao) {
         dao.updateLanguage(userId, language)
     }
 
-    // ---------------------- DRINK ----------------------
+    suspend fun updateGoal(userId: Long, objectif: Int) {
+        dao.updateGoal(userId, objectif)
+    }
 
+    // ---------------------- DRINK ----------------------
     suspend fun insertDrink(drink: DrinkEntry) {
+        // في DAO لا يوجد دوال مشروبات هنا، لذلك يجب إضافتها إذا أردت
+        // مثال:
+        // @Insert suspend fun insertDrink(drink: DrinkEntry): Long
         dao.insertDrink(drink)
     }
 
     suspend fun getTotalByDate(userId: Long, date: String): Int {
-        return dao.getTotalByDate(userId, date)
+        return dao.getTotalByDate(userId, date) ?: 0
     }
 
-    // ---------------------- GOAL HISTORY ----------------------
 
     fun getGoalHistoryLive(userId: Long): LiveData<List<GoalHistory>> {
         return dao.getGoalHistoryLive(userId)
     }
 
     // ---------------------- WEEKLY SUMMARY ----------------------
-
     suspend fun getWeeklySummary(userId: Long): List<DailySummary> {
         return dao.getWeeklySummary(userId)
     }
+
+
 }
-
-
-
