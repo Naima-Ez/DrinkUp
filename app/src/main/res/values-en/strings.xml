@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DrinkUp</string>
+    <string name="status">Status</string>
+    <string name="tip_icon">Tip icon</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title_1">Track your daily hydration</string>
+    <string name="onboarding_desc_1">Easily record your water intake throughout the day</string>
+    <string name="onboarding_title_2">Get automatic reminders</string>
+    <string name="onboarding_desc_2">Never miss your glass of water with our personalized notifications</string>
+    <string name="onboarding_title_3">Analyze your progress with charts</string>
+    <string name="onboarding_desc_3">Visualize your habits and achieve your hydration goals</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="start">Start</string>
+
+    <!-- Auth -->
+    <string name="login_title">Login</string>
+    <string name="register_title">Create Account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="birth_date">Birth Date</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="no_account_register">No account? Register</string>
+    <string name="have_account_login">Already have an account? Login</string>
+
+    <!-- Errors -->
+    <string name="error_email_required">Email is required</string>
+    <string name="error_email_invalid">Invalid email</string>
+    <string name="error_password_required">Password is required</string>
+    <string name="error_password_length">Password must be at least 6 characters</string>
+    <string name="error_name_required">Name is required</string>
+    <string name="error_birthdate_required">Please select your birth date</string>
+    <string name="error_age_minimum">You must be at least 18 years old to use this app</string>
+    <string name="error_invalid_amount">Please enter a valid amount</string>
+    <string name="error_invalid_goal">Please enter a valid goal</string>
+
+    <!-- Success -->
+    <string name="login_success">Login successful</string>
+    <string name="register_success">Account created successfully</string>
+
+    <!-- Tabs -->
+    <string name="tab_dashboard">Dashboard</string>
+    <string name="tab_goals">Goals</string>
+    <string name="tab_tips">Tips</string>
+    <string name="tab_profile">My Account</string>
+
+    <!-- Dashboard -->
+    <string name="today_consumption">You drank %s L today</string>
+    <string name="weekly_stats">Weekly Statistics</string>
+    <string name="add_drink">Add Water</string>
+    <string name="add_drink_title">Add Water</string>
+    <string name="add_100ml">100 ml</string>
+    <string name="add_200ml">200 ml</string>
+    <string name="add_300ml">300 ml</string>
+    <string name="add_500ml">500 ml</string>
+    <string name="custom_amount">Custom Amount</string>
+    <string name="hint_custom_amount">Amount in ml</string>
+    <string name="title_custom_amount">Custom Amount</string>
+    <string name="drink_added">%d ml added</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Motivation -->
+    <string name="motivation_begin">Start your hydration day! 💧</string>
+    <string name="motivation_start">Good start! Keep it up 👍</string>
+    <string name="motivation_good">Excellent work! Almost there 🌟</string>
+    <string name="motivation_great">Superb! Almost at goal 🎯</string>
+    <string name="motivation_achieved">Goal achieved! Congratulations! 🎉</string>
+
+    <!-- Goals -->
+    <string name="current_goal">Daily Goal: %s L</string>
+    <string name="consumed_today">Consumed today: %s L</string>
+    <string name="goal_progress">Progress: %d%%</string>
+    <string name="modify_goal">Modify Goal</string>
+    <string name="title_modify_goal">Modify Daily Goal</string>
+    <string name="hint_goal_liters">Goal in liters (e.g. 2.5)</string>
+    <string name="save">Save</string>
+    <string name="goal_updated">Goal updated</string>
+    <string name="goal_history_title">Goal History</string>
+    <string name="no_history_yet">No history yet</string>
+    <string name="goal_history_objective">Goal: %s L</string>
+    <string name="goal_history_consumed">Consumed: %s L</string>
+    <string name="goal_achieved">Achieved ✓</string>
+    <string name="goal_not_achieved">Not Achieved</string>
+
+    <!-- Tips -->
+    <string name="tip_1_title">Drink before each meal</string>
+    <string name="tip_1_description">Make it a habit to drink a large glass of water 30 minutes before each meal. It helps with hydration and can improve digestion.</string>
+    <string name="tip_2_title">Set regular reminders</string>
+    <string name="tip_2_description">Schedule alarms every 2-3 hours to remind you to drink water. Your body will thank you!</string>
+    <string name="tip_3_title">Keep a bottle handy</string>
+    <string name="tip_3_description">Always have a water bottle with you, whether at work, in the car or at home. Visibility encourages consumption.</string>
+    <string name="tip_4_title">Eat water-rich foods</string>
+    <string name="tip_4_description">Incorporate water-rich fruits and vegetables into your diet: cucumber, watermelon, tomatoes, oranges.</string>
+    <string name="tip_5_title">Hydrate during exercise</string>
+    <string name="tip_5_description">Drink water before, during and after physical activity. Good hydration improves performance and recovery.</string>
+    <string name="share">Share</string>
+    <string name="share_tip">Share this tip</string>
+
+    <!-- Profile -->
+    <string name="daily_goal_display">Daily Goal: %s L</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="profile_updated">Profile updated</string>
+    <string name="notifications">Notifications</string>
+    <string name="change_language">Change Language</string>
+    <string name="select_language">Select Language</string>
+    <string name="french">Français</string>
+    <string name="english">English</string>
+    <string name="arabic">العربية</string>
+    <string name="logout">Logout</string>
+    <string name="logout_confirmation">Are you sure you want to logout?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <!-- Notifications -->
+    <string name="notification_title">Hydration Reminder</string>
+    <string name="notification_message">Remember to drink a glass of water 💧</string>
+</resources>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">DrinkUp</string>
+    <string name="status">Statut</string>
+    <string name="tip_icon">Icône de conseil</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title_1">Suivez votre hydratation quotidienne</string>
+    <string name="onboarding_desc_1">Enregistrez facilement votre consommation d\'eau tout au long de la journée</string>
+    <string name="onboarding_title_2">Recevez des rappels automatiques</string>
+    <string name="onboarding_desc_2">Ne manquez jamais votre verre d\'eau grâce à nos notifications personnalisées</string>
+    <string name="onboarding_title_3">Analysez vos progrès avec des graphiques</string>
+    <string name="onboarding_desc_3">Visualisez vos habitudes et atteignez vos objectifs d\'hydratation</string>
+    <string name="next">Suivant</string>
+    <string name="skip">Passer</string>
+    <string name="start">Commencer</string>
+
+    <!-- Auth -->
+    <string name="login_title">Connexion</string>
+    <string name="register_title">Créer un compte</string>
+    <string name="email">Email</string>
+    <string name="password">Mot de passe</string>
+    <string name="full_name">Nom complet</string>
+    <string name="birth_date">Date de naissance</string>
+    <string name="login">Se connecter</string>
+    <string name="register">S\'inscrire</string>
+    <string name="no_account_register">Pas de compte ? Inscrivez-vous</string>
+    <string name="have_account_login">Déjà un compte ? Connectez-vous</string>
+
+    <!-- Errors -->
+    <string name="error_email_required">L\'email est requis</string>
+    <string name="error_email_invalid">Email invalide</string>
+    <string name="error_password_required">Le mot de passe est requis</string>
+    <string name="error_password_length">Le mot de passe doit contenir au moins 6 caractères</string>
+    <string name="error_name_required">Le nom est requis</string>
+    <string name="error_birthdate_required">Veuillez sélectionner votre date de naissance</string>
+    <string name="error_age_minimum">Vous devez avoir au moins 18 ans pour utiliser cette application</string>
+    <string name="error_invalid_amount">Veuillez entrer un montant valide</string>
+    <string name="error_invalid_goal">Veuillez entrer un objectif valide</string>
+
+    <!-- Success -->
+    <string name="login_success">Connexion réussie</string>
+    <string name="register_success">Compte créé avec succès</string>
+
+    <!-- Tabs -->
+    <string name="tab_dashboard">Tableau de bord</string>
+    <string name="tab_goals">Objectifs</string>
+    <string name="tab_tips">Conseils</string>
+    <string name="tab_profile">Mon compte</string>
+
+    <!-- Dashboard -->
+    <string name="today_consumption">Vous avez bu %s L aujourd\'hui</string>
+    <string name="weekly_stats">Statistiques hebdomadaires</string>
+    <string name="add_drink">Ajouter de l\'eau</string>
+    <string name="add_drink_title">Ajouter de l\'eau</string>
+    <string name="add_100ml">100 ml</string>
+    <string name="add_200ml">200 ml</string>
+    <string name="add_300ml">300 ml</string>
+    <string name="add_500ml">500 ml</string>
+    <string name="custom_amount">Quantité personnalisée</string>
+    <string name="hint_custom_amount">Quantité en ml</string>
+    <string name="title_custom_amount">Quantité personnalisée</string>
+    <string name="drink_added">%d ml ajoutés</string>
+    <string name="add">Ajouter</string>
+    <string name="cancel">Annuler</string>
+
+    <!-- Motivation -->
+    <string name="motivation_begin">Commencez votre journée en hydratation ! 💧</string>
+    <string name="motivation_start">Bon début ! Continuez comme ça 👍</string>
+    <string name="motivation_good">Excellent travail ! Vous y êtes presque 🌟</string>
+    <string name="motivation_great">Superbe ! Presque à l\'objectif 🎯</string>
+    <string name="motivation_achieved">Objectif atteint ! Bravo ! 🎉</string>
+
+    <!-- Goals -->
+    <string name="current_goal">Objectif quotidien : %s L</string>
+    <string name="consumed_today">Consommé aujourd\'hui : %s L</string>
+    <string name="goal_progress">Progression : %d%%</string>
+    <string name="modify_goal">Modifier l\'objectif</string>
+    <string name="title_modify_goal">Modifier l\'objectif quotidien</string>
+    <string name="hint_goal_liters">Objectif en litres (ex: 2.5)</string>
+    <string name="save">Enregistrer</string>
+    <string name="goal_updated">Objectif mis à jour</string>
+    <string name="goal_history_title">Historique des objectifs</string>
+    <string name="no_history_yet">Aucun historique pour le moment</string>
+    <string name="goal_history_objective">Objectif : %s L</string>
+    <string name="goal_history_consumed">Consommé : %s L</string>
+    <string name="goal_achieved">Atteint ✓</string>
+    <string name="goal_not_achieved">Non atteint</string>
+
+    <!-- Tips -->
+    <string name="tip_1_title">Buvez avant chaque repas</string>
+    <string name="tip_1_description">Prenez l\'habitude de boire un grand verre d\'eau 30 minutes avant chaque repas. Cela aide à l\'hydratation et peut améliorer la digestion.</string>
+    <string name="tip_2_title">Fixez des rappels réguliers</string>
+    <string name="tip_2_description">Programmez des alarmes toutes les 2-3 heures pour vous rappeler de boire de l\'eau. Votre corps vous remerciera !</string>
+    <string name="tip_3_title">Gardez une bouteille à portée de main</string>
+    <string name="tip_3_description">Ayez toujours une bouteille d\'eau avec vous, que ce soit au travail, en voiture ou à la maison. La visibilité encourage la consommation.</string>
+    <string name="tip_4_title">Mangez des aliments riches en eau</string>
+    <string name="tip_4_description">Incorporez des fruits et légumes riches en eau dans votre alimentation : concombre, pastèque, tomates, oranges.</string>
+    <string name="tip_5_title">Hydratez-vous pendant l\'exercice</string>
+    <string name="tip_5_description">Buvez de l\'eau avant, pendant et après l\'activité physique. Une bonne hydratation améliore les performances et la récupération.</string>
+    <string name="share">Partager</string>
+    <string name="share_tip">Partager ce conseil</string>
+
+    <!-- Profile -->
+    <string name="daily_goal_display">Objectif quotidien : %s L</string>
+    <string name="edit_profile">Modifier le profil</string>
+    <string name="profile_updated">Profil mis à jour</string>
+    <string name="notifications">Notifications</string>
+    <string name="change_language">Changer la langue</string>
+    <string name="select_language">Sélectionner la langue</string>
+    <string name="french">Français</string>
+    <string name="english">English</string>
+    <string name="arabic">العربية</string>
+    <string name="logout">Déconnexion</string>
+    <string name="logout_confirmation">Êtes-vous sûr de vouloir vous déconnecter ?</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+
+    <!-- Notifications -->
+    <string name="notification_title">Rappel d\'hydratation</string>
+    <string name="notification_message">Pensez à boire un verre d\'eau 💧</string>
+</resources>

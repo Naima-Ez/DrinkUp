@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DrinkUp</string>
+    <string name="status">الحالة</string>
+    <string name="tip_icon">أيقونة النصيحة</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title_1">تتبع ترطيبك اليومي</string>
+    <string name="onboarding_desc_1">سجل استهلاكك من الماء بسهولة طوال اليوم</string>
+    <string name="onboarding_title_2">احصل على تذكيرات تلقائية</string>
+    <string name="onboarding_desc_2">لا تفوت كوب الماء الخاص بك بفضل إشعاراتنا الشخصية</string>
+    <string name="onboarding_title_3">تحليل تقدمك بالرسوم البيانية</string>
+    <string name="onboarding_desc_3">تصور عاداتك واحقق أهداف الترطيب الخاصة بك</string>
+    <string name="next">التالي</string>
+    <string name="skip">تخطي</string>
+    <string name="start">ابدأ</string>
+
+    <!-- Auth -->
+    <string name="login_title">تسجيل الدخول</string>
+    <string name="register_title">إنشاء حساب</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="password">كلمة المرور</string>
+    <string name="full_name">الاسم الكامل</string>
+    <string name="birth_date">تاريخ الميلاد</string>
+    <string name="login">دخول</string>
+    <string name="register">تسجيل</string>
+    <string name="no_account_register">لا يوجد حساب؟ سجل الآن</string>
+    <string name="have_account_login">لديك حساب؟ سجل الدخول</string>
+
+    <!-- Errors -->
+    <string name="error_email_required">البريد الإلكتروني مطلوب</string>
+    <string name="error_email_invalid">بريد إلكتروني غير صالح</string>
+    <string name="error_password_required">كلمة المرور مطلوبة</string>
+    <string name="error_password_length">يجب أن تحتوي كلمة المرور على 6 أحرف على الأقل</string>
+    <string name="error_name_required">الاسم مطلوب</string>
+    <string name="error_birthdate_required">يرجى تحديد تاريخ ميلادك</string>
+    <string name="error_age_minimum">يجب أن يكون عمرك 18 عامًا على الأقل لاستخدام هذا التطبيق</string>
+    <string name="error_invalid_amount">يرجى إدخال كمية صالحة</string>
+    <string name="error_invalid_goal">يرجى إدخال هدف صالح</string>
+
+    <!-- Success -->
+    <string name="login_success">تم تسجيل الدخول بنجاح</string>
+    <string name="register_success">تم إنشاء الحساب بنجاح</string>
+
+    <!-- Tabs -->
+    <string name="tab_dashboard">لوحة التحكم</string>
+    <string name="tab_goals">الأهداف</string>
+    <string name="tab_tips">نصائح</string>
+    <string name="tab_profile">حسابي</string>
+
+    <!-- Dashboard -->
+    <string name="today_consumption">شربت %s لتر اليوم</string>
+    <string name="weekly_stats">الإحصائيات الأسبوعية</string>
+    <string name="add_drink">إضافة ماء</string>
+    <string name="add_drink_title">إضافة ماء</string>
+    <string name="add_100ml">100 مل</string>
+    <string name="add_200ml">200 مل</string>
+    <string name="add_300ml">300 مل</string>
+    <string name="add_500ml">500 مل</string>
+    <string name="custom_amount">كمية مخصصة</string>
+    <string name="hint_custom_amount">الكمية بالملليلتر</string>
+    <string name="title_custom_amount">كمية مخصصة</string>
+    <string name="drink_added">تمت إضافة %d مل</string>
+    <string name="add">إضافة</string>
+    <string name="cancel">إلغاء</string>
+
+    <!-- Motivation -->
+    <string name="motivation_begin">ابدأ يوم الترطيب الخاص بك! 💧</string>
+    <string name="motivation_start">بداية جيدة! استمر 👍</string>
+    <string name="motivation_good">عمل ممتاز! أنت على وشك الانتهاء 🌟</string>
+    <string name="motivation_great">رائع! على وشك تحقيق الهدف 🎯</string>
+    <string name="motivation_achieved">تم تحقيق الهدف! تهانينا! 🎉</string>
+
+    <!-- Goals -->
+    <string name="current_goal">الهدف اليومي: %s لتر</string>
+    <string name="consumed_today">المستهلك اليوم: %s لتر</string>
+    <string name="goal_progress">التقدم: %d%%</string>
+    <string name="modify_goal">تعديل الهدف</string>
+    <string name="title_modify_goal">تعديل الهدف اليومي</string>
+    <string name="hint_goal_liters">الهدف باللترات (مثال: 2.5)</string>
+    <string name="save">حفظ</string>
+    <string name="goal_updated">تم تحديث الهدف</string>
+    <string name="goal_history_title">سجل الأهداف</string>
+    <string name="no_history_yet">لا يوجد سجل بعد</string>
+    <string name="goal_history_objective">الهدف: %s لتر</string>
+    <string name="goal_history_consumed">المستهلك: %s لتر</string>
+    <string name="goal_achieved">تم التحقيق ✓</string>
+    <string name="goal_not_achieved">لم يتحقق</string>
+
+    <!-- Tips -->
+    <string name="tip_1_title">اشرب قبل كل وجبة</string>
+    <string name="tip_1_description">اجعل من عادتك شرب كوب كبير من الماء قبل 30 دقيقة من كل وجبة. يساعد في الترطيب ويحسن الهضم.</string>
+    <string name="tip_2_title">حدد تذكيرات منتظمة</string>
+    <string name="tip_2_description">اضبط المنبهات كل 2-3 ساعات لتذكيرك بشرب الماء. سيشكرك جسمك!</string>
+    <string name="tip_3_title">احتفظ بزجاجة في متناول اليد</string>
+    <string name="tip_3_description">احمل دائمًا زجاجة ماء معك، سواء في العمل أو في السيارة أو في المنزل. الرؤية تشجع على الاستهلاك.</string>
+    <string name="tip_4_title">تناول الأطعمة الغنية بالماء</string>
+    <string name="tip_4_description">أدخل الفواكه والخضروات الغنية بالماء في نظامك الغذائي: الخيار، البطيخ، الطماطم، البرتقال.</string>
+    <string name="tip_5_title">رطب نفسك أثناء التمرين</string>
+    <string name="tip_5_description">اشرب الماء قبل وأثناء وبعد النشاط البدني. الترطيب الجيد يحسن الأداء والشفاء.</string>
+    <string name="share">مشاركة</string>
+    <string name="share_tip">مشاركة هذه النصيحة</string>
+
+    <!-- Profile -->
+    <string name="daily_goal_display">الهدف اليومي: %s لتر</string>
+    <string name="edit_profile">تعديل الملف الشخصي</string>
+    <string name="profile_updated">تم تحديث الملف الشخصي</string>
+    <string name="notifications">الإشعارات</string>
+    <string name="change_language">تغيير اللغة</string>
+    <string name="select_language">اختر اللغة</string>
+    <string name="french">Français</string>
+    <string name="english">English</string>
+    <string name="arabic">العربية</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="logout_confirmation">هل أنت متأكد أنك تريد تسجيل الخروج؟</string>
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+
+    <!-- Notifications -->
+    <string name="notification_title">تذكير الترطيب</string>
+    <string name="notification_message">تذكر شرب كوب من الماء 💧</string>
+</resources>

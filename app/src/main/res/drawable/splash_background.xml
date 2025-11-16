@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#A4D7E1"
+                android:endColor="#4A90E2"
+                android:angle="135"
+                android:type="linear"/>
+        </shape>
+    </item>
+    <item
+        android:drawable="@drawable/ic_water_drop_large"
+        android:gravity="center"/>
+</layer-list>
