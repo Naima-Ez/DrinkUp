@@ -33,7 +33,7 @@
         android:layout_height="56dp"
         android:text="@string/next"
         android:textColor="@color/white"
-        android:backgroundTint="@color/blue_primary"
+        android:backgroundTint="#87CEEB"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"

@@ -6,6 +6,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.drinkup.fragments.DashboardFragment
 import com.example.drinkup.fragments.ProfileFragment
 import com.example.drinkup.fragments.TipsFragment
+import com.example.drinkup.fragments.GoalsFragment
 
 class MainPagerAdapter(fragmentActivity: FragmentActivity) :
     FragmentStateAdapter(fragmentActivity) {
@@ -15,6 +16,7 @@ class MainPagerAdapter(fragmentActivity: FragmentActivity) :
     override fun createFragment(position: Int): Fragment {
         return when (position) {
             0 -> DashboardFragment()
+            1 -> GoalsFragment()
             2 -> TipsFragment()
             3 -> ProfileFragment()
             else -> DashboardFragment()
